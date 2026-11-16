@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Surprise – A Little Gift for You 💕 | Happy Birthday 18.11</title>
+    <meta name="description" content="Một website chúc mừng sinh nhật tương tác ngọt ngào, lãng mạn dành riêng cho bạn vào ngày 18/11." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Quicksand:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Floating Fluffy Pastel Clouds Background Layer -->
+    <div class="floating-clouds-layer" aria-hidden="true">
+      <div class="cloud cloud-1">☁️</div>
+      <div class="cloud cloud-2">☁️</div>
+      <div class="cloud cloud-3">☁️</div>
+      <div class="cloud cloud-4">☁️</div>
+    </div>
+
+    <!-- Ambient Canvas for Falling Petals and Sparkles -->
+    <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+    <!-- Floating Audio Controller Widget -->
+    <aside class="floating-audio-widget" id="floating-audio-widget" aria-label="Bộ điều khiển âm nhạc">
+      <button class="music-toggle-btn" id="btn-music-toggle" title="Bật/Tắt nhạc nền" aria-label="Bật/Tắt nhạc nền">
+        <span class="music-disc-icon">🎵</span>
+      </button>
+      <div class="audio-controls-panel">
+        <span class="music-status-text" id="music-status-text">Bật nhạc 🔇</span>
+        <div class="volume-slider-wrapper">
+          <label for="volume-slider" class="sr-only">Âm lượng</label>
+          <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5" title="Âm lượng" />
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-container">
+      <!-- ================= SECTION 1: WELCOME HERO ================= -->
+      <section class="hero-section" id="hero-section">
+        <div class="hero-content">
+          <div class="date-badge">
+            <span class="badge-sparkle">🎀</span>
+            <span class="badge-text">18 . 11 • Happy Birthday Princess</span>
+            <span class="badge-sparkle">🎀</span>
+          </div>
+
+          <h1 class="hero-title">
+            Happy Birthday, <span class="highlight-text">Bé Yêu!</span> 💖
+          </h1>
+
+          <p class="hero-subtitle">
+            Hôm nay là một ngày thật đặc biệt. Có một món quà nhỏ chứa chan muôn vàn sự dịu dàng và yêu thương đang chờ bạn khám phá...
+          </p>
+
+          <!-- Interactive 3D Gift Box -->
+          <div class="hero-gift-box-wrapper" id="hero-gift-box">
+            <div class="gift-box">
+              <div class="gift-lid">
+                <div class="gift-bow">
+                  <span class="bow-left"></span>
+                  <span class="bow-right"></span>
+                </div>
+              </div>
+              <div class="gift-body">
+                <div class="gift-ribbon-v"></div>
+                <div class="gift-ribbon-h"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn-primary" id="btn-open-gift">
+              <span class="btn-icon">🎁</span>
+              <span class="btn-label">Mở Hộp Quà Sinh Nhật / Open Your Gift</span>
+              <span class="btn-glow"></span>
+            </button>
+          </div>
+
+          <div class="scroll-down-hint">
+            <span class="scroll-text">Cuộn xuống để khám phá</span>
+            <span class="scroll-arrow">↓</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: INTERACTIVE CAKE ================= -->
+      <section class="cake-section" id="cake-section">
+        <div class="section-header">
+          <span class="section-tag">🎂 The Birthday Cake</span>
+          <h2 class="section-title">Make a Wish & Blow the Candles!</h2>
+          <p class="section-desc">
+            Nhắm mắt lại, thành tâm ước một điều thật ngọt ngào cho tuổi mới, rồi thổi tắt những ngọn nến nhé! ✨
+          </p>
+        </div>
+
+        <!-- 3-Tier Cake Mount -->
+        <div class="cake-mount">
+          <div id="cake-container" class="cake-container">
+            <!-- Dynamic cake and candles injected via JS -->
+          </div>
+        </div>
+
+        <!-- Blow Interactive Controls -->
+        <div class="blow-controls-panel">
+          <div class="blow-meter-container" id="blow-meter-container">
+            <span class="meter-label">🌬️ Cường độ hơi thở:</span>
+            <div class="meter-track">
+              <div class="meter-fill" id="blow-meter-fill"></div>
+            </div>
+          </div>
+
+          <div class="blow-buttons-row">
+            <button class="btn-secondary" id="btn-mic-toggle">
+              <span class="btn-icon">🎤</span>
+              <span class="btn-label">Bật Mic để thổi nến</span>
+            </button>
+
+            <button class="btn-primary btn-blow" id="btn-blow-manual">
+              <span class="btn-icon">💨</span>
+              <span class="btn-label">Nhấn để Thổi nến ngay</span>
+              <span class="btn-glow"></span>
+            </button>
+          </div>
+
+          <p class="mic-status-badge" id="mic-status-badge">
+            Bạn có thể bật mic thổi vào thiết bị hoặc nhấn nút "Thổi nến" nhé! 💕
+          </p>
+        </div>
+
+        <!-- Wish Came True Magical Banner -->
+        <div class="wish-banner" id="wish-banner">
+          <div class="wish-banner-card">
+            <span class="wish-banner-icon">🎉</span>
+            <h3 class="wish-banner-title">✨ Điều ước của bạn chắc chắn sẽ thành hiện thực! ✨</h3>
+            <p class="wish-banner-sub">Tuổi mới luôn rạng ngời, bình an và ngập tràn hạnh phúc nha!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Container for Unlocked Sections (reveals smoothly after blowing cake) -->
+      <div class="interactive-experience" id="interactive-experience">
+        <!-- ================= SECTION 3: PERSONAL PHOTO GALLERY ================= -->
+        <section class="gallery-section" id="gallery-section">
+          <div class="section-header">
+            <span class="section-tag">📸 Personal Scrapbook</span>
+            <h2 class="section-title">Những Khoảnh Khắc Ngọt Ngào</h2>
+            <p class="section-desc">
+              Mỗi nụ cười của bạn là một tia nắng ấm áp, lưu giữ những trang ký ức lấp lánh nhất...
+            </p>
+          </div>
+
+          <div class="polaroid-grid" id="polaroid-grid">
+            <!-- Injected via gallery.js -->
+          </div>
+        </section>
+
+        <!-- ================= SECTION 4: BIRTHDAY LETTER ================= -->
+        <section class="letter-section" id="letter-section">
+          <div class="section-header">
+            <span class="section-tag">💌 A Letter For You</span>
+            <h2 class="section-title">Bức Thư Tuổi Mới Gửi Bạn</h2>
+            <p class="section-desc">
+              Một bức thư bí mật được niêm phong bằng sáp vàng... Hãy nhấn vào để mở nhé!
+            </p>
+          </div>
+
+          <div class="envelope-wrapper">
+            <div class="envelope" id="letter-envelope" title="Nhấn để mở thư">
+              <div class="envelope-back"></div>
+              
+              <!-- Paper letter that slides out -->
+              <div class="letter-paper" id="letter-paper">
+                <div class="paper-header">
+                  <div class="paper-stamp">
+                    <span class="stamp-icon">💌</span>
+                    <span class="stamp-txt">18.11 LOVE</span>
+                  </div>
+                  <span class="paper-date">18 . 11 Memories 🌸</span>
+                  <span class="paper-seal">❦</span>
+                </div>
+                <div class="letter-typewriter-content" id="letter-typewriter-content">
+                  <!-- Typewriter text inserted here -->
+                </div>
+                <div class="paper-footer">
+                  <span class="signature-line">With all my warmest thoughts,</span>
+                  <span class="signature-name">Always here for you 💕</span>
+                </div>
+              </div>
+
+              <div class="envelope-pocket"></div>
+              
+              <!-- Envelope Flap & Wax Seal -->
+              <div class="envelope-flap">
+                <div class="wax-seal" id="wax-seal">
+                  <span class="seal-icon">💌</span>
+                  <span class="seal-text">18.11</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="envelope-open-hint" id="envelope-open-hint">
+              ✨ Chạm vào phong thư để phá dấu sáp và đọc lời chúc!
+            </p>
+
+            <div class="letter-actions" id="letter-actions">
+              <button class="btn-secondary" id="btn-retype-letter">
+                <span>📜 Đọc lại thư</span>
+              </button>
+              <button class="btn-primary" id="btn-heart-shower">
+                <span>💖 Thả ngàn tim chúc mừng</span>
+              </button>
+              <button class="btn-secondary" id="btn-copy-wish">
+                <span>📋 Sao chép lời chúc</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= SECTION 5: BALLOON POPPING MINI GAME ================= -->
+        <section class="balloons-section" id="balloons-section">
+          <div class="section-header">
+            <span class="section-tag">🎈 Surprise Balloons</span>
+            <h2 class="section-title">Chạm Bóng Nhận Lời Khen</h2>
+            <p class="section-desc">
+              Mỗi quả bóng ẩn giấu một thông điệp và lời khen dễ thương dành riêng cho bạn!
+            </p>
+            <div class="balloons-status-bar">
+              <span>Đã mở: </span>
+              <strong id="balloons-counter" class="balloons-counter">0 / 6</strong>
+              <button class="btn-text-link" id="btn-reset-balloons">Bơm bóng lại 🎈</button>
+            </div>
+          </div>
+
+          <div class="balloons-cluster" id="balloons-cluster">
+            <!-- Balloons generated via balloons.js -->
+          </div>
+        </section>
+
+        <!-- ================= SECTION 6: CELEBRATION FINALE ================= -->
+        <section class="finale-section" id="finale-section">
+          <div class="finale-card">
+            <div class="finale-decorations" aria-hidden="true">
+              <span>🌸</span><span>✨</span><span>🎂</span><span>💖</span><span>🎉</span>
+            </div>
+            <h2 class="finale-title">
+              Mừng Bạn Thêm Một Tuổi Thật Rực Rỡ! 🌟
+            </h2>
+            <p class="finale-text">
+              Hy vọng món quà nhỏ này đã mang đến cho bạn thật nhiều nụ cười và niềm vui trong ngày sinh nhật 18/11. Chúc mọi ước mơ của bạn đều sớm trở thành hiện thực!
+            </p>
+            <div class="finale-actions">
+              <button class="btn-primary" id="btn-replay-all">
+                <span class="btn-icon">🔄</span>
+                <span class="btn-label">Trải nghiệm lại từ đầu / Replay</span>
+                <span class="btn-glow"></span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>Made with love & care for your special 18/11 birthday 💕</p>
+    </footer>
+
+    <!-- Lightbox Modal for Photo Gallery -->
+    <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
+      <div class="lightbox-backdrop"></div>
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightbox-close" title="Đóng" aria-label="Đóng">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" title="Ảnh trước" aria-label="Ảnh trước">&#10094;</button>
+        
+        <div class="lightbox-body">
+          <div class="lightbox-img-frame">
+            <img src="" alt="" id="lightbox-img" class="lightbox-img" />
+          </div>
+          <div class="lightbox-details">
+            <span class="lightbox-date" id="lightbox-date"></span>
+            <h3 class="lightbox-title" id="lightbox-title"></h3>
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+            <div class="lightbox-reactions">
+              <button class="lightbox-heart-btn" id="lightbox-heart-btn" title="Thả tim">
+                <span class="heart-icon">💖</span>
+                <span class="heart-count" id="lightbox-heart-count">0</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" title="Ảnh tiếp theo" aria-label="Ảnh tiếp theo">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Balloon Surprise Modal -->
+    <div class="balloon-surprise-modal" id="balloon-surprise-modal" role="dialog" aria-modal="true">
+      <div class="balloon-modal-card">
+        <span class="balloon-modal-icon">🎁</span>
+        <h4 class="balloon-modal-title">Lời nhắn bí mật gửi bạn:</h4>
+        <p class="balloon-surprise-text" id="balloon-surprise-text"></p>
+        <button class="btn-primary btn-sm" id="balloon-surprise-close">
+          <span>Tuyệt quá! Cảm ơn nha 💕</span>
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
