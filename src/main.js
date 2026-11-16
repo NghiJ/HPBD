@@ -1,6 +1,6 @@
 // Main Application Entry Point
 import { soundEngine } from './audio.js';
-import { CakeManager } from './cake.js';
+import { Cake3DManager } from './cake3d.js';
 import { GalleryManager } from './gallery.js';
 import { LetterManager } from './letter.js';
 import { BalloonsManager } from './balloons.js';
@@ -8,7 +8,7 @@ import { AmbientEffects } from './effects.js';
 import confetti from 'canvas-confetti';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize ambient effects
+  // Initialize ambient effects (petals, sparkle trails)
   const ambient = new AmbientEffects();
 
   // Initialize Gallery, Letter, Balloons
@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sections that unlock or reveal
   const interactiveSections = document.getElementById('interactive-experience');
 
-  // Initialize Cake
-  const cake = new CakeManager({
+  // Initialize 3D Interactive Cake
+  const cake = new Cake3DManager({
     onExtinguished: () => {
-      // Reveal the rest of the surprise
+      // Reveal the rest of the surprise smoothly
       if (interactiveSections) {
         interactiveSections.classList.add('unlocked');
       }
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isPlaying) {
         musicToggleBtn.classList.add('playing');
         musicToggleBtn.setAttribute('title', 'Tắt nhạc nền');
-        if (musicStatusText) musicStatusText.textContent = 'Đang phát nhạc 🎵';
+        if (musicStatusText) musicStatusText.innerHTML = 'Đang phát nhạc 🎵<span class="music-wave-bars"><i></i><i></i><i></i></span>';
       } else {
         musicToggleBtn.classList.remove('playing');
         musicToggleBtn.setAttribute('title', 'Bật nhạc nền');
@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Confetti burst
       confetti({
-        particleCount: 70,
+        particleCount: 75,
         spread: 80,
         origin: { y: 0.6 },
-        colors: ['#ff85a2', '#a29bfe', '#ffeaa7', '#ff7675']
+        colors: ['#ff5c8a', '#ff8fab', '#ffd166', '#a29bfe', '#74b9ff']
       });
 
       // Smooth scroll to the Cake section
@@ -103,6 +103,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 800);
     });
   }
+
+  // Modern 3D Parallax Tilt for Polaroid Scrapbook Cards
+  setTimeout(() => {
+    const cards = document.querySelectorAll('.polaroid-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.04)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        const initialRot = card.style.getPropertyValue('--rotation') || '0deg';
+        card.style.transform = `rotate(${initialRot})`;
+      });
+    });
+  }, 400);
 
   // Replay All Button
   const replayBtn = document.getElementById('btn-replay-all');
@@ -118,9 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
       confetti({
-        particleCount: 50,
-        spread: 70,
-        origin: { y: 0.8 }
+        particleCount: 60,
+        spread: 80,
+        origin: { y: 0.8 },
+        colors: ['#ff5c8a', '#ff8fab', '#ffd166']
       });
     });
   }
