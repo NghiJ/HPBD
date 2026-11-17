@@ -56,13 +56,13 @@ export class GalleryManager {
       },
       {
         id: 6,
-        src: '/photos/photo_3.jpg',
-        title: 'Tuổi Mới Thật Rực Rỡ 🎂',
-        caption: 'Nguyện cho tất cả ước mong chân thành nhất của bạn gửi vào ngọn nến hôm nay đều sẽ hóa thành hiện thực.',
-        date: 'Make A Wish 18.11',
+        src: '/photos/real_6.jpg',
+        title: 'Thanh Xuân Tươi Đẹp & Rạng Ngời 🌸',
+        caption: 'Cảm ơn vì sự hiện diện dịu dàng và ấm áp của bạn. Chúc thanh xuân của bạn luôn tràn ngập hoa thơm, nụ cười và những điều ngọt ngào nhất!',
+        date: '18 . 11 • Kỷ Niệm Ngọt Ngào',
         rotation: 2,
         tapeColor: '#e8dff5',
-        sticker: '🧸'
+        sticker: '🎂'
       }
     ];
 
