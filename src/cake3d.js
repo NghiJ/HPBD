@@ -76,14 +76,15 @@ export class Cake3DManager {
   }
 
   setupScene() {
-    const width = this.viewport.clientWidth || 480;
-    const height = 440;
+    const isMobile = window.innerWidth < 600;
+    const width = this.viewport.clientWidth || window.innerWidth;
+    const height = isMobile ? 350 : 440;
 
     this.scene = new THREE.Scene();
 
-    // Soft perspective camera
+    // Soft perspective camera with mobile adaptation
     this.camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
-    this.camera.position.set(0, 4.2, 9.2);
+    this.camera.position.set(0, isMobile ? 4.5 : 4.2, isMobile ? 10.4 : 9.2);
     this.camera.lookAt(0, 0.4, 0);
 
     // Renderer with antialias and soft shadows
@@ -424,9 +425,11 @@ export class Cake3DManager {
     // Window resize handler
     window.addEventListener('resize', () => {
       if (!this.viewport || !this.renderer || !this.camera) return;
+      const isMobile = window.innerWidth < 600;
       const width = this.viewport.clientWidth;
-      const height = 440;
+      const height = isMobile ? 350 : 440;
       this.camera.aspect = width / height;
+      this.camera.position.set(0, isMobile ? 4.5 : 4.2, isMobile ? 10.4 : 9.2);
       this.camera.updateProjectionMatrix();
       this.renderer.setSize(width, height);
     });

@@ -1961,24 +1961,276 @@ body {
 }
 
 /* ==========================================================================
-   Responsive Adaptations
+   Responsive Adaptations (Mobile Phones & Tablets)
    ========================================================================== */
 @media (max-width: 768px) {
-  .section-title { font-size: 2.4rem; }
+  html { font-size: 15px; }
+
+  .main-container {
+    padding: 0 14px;
+  }
+
+  /* Compact Sleek Music Button on Mobile */
   .floating-audio-widget {
-    top: 14px;
-    right: 14px;
-    padding: 6px 10px;
+    top: max(12px, env(safe-area-inset-top));
+    right: 12px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 4px 14px rgba(255, 92, 138, 0.35);
   }
   .audio-controls-panel { display: none; }
+  .music-toggle-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  /* Hero Section on Phone */
+  .hero-section {
+    min-height: auto;
+    padding: 60px 6px 36px;
+  }
+  .hero-content {
+    gap: 16px;
+  }
+  .date-badge {
+    font-size: 0.85rem;
+    padding: 7px 18px;
+  }
+  .hero-title {
+    font-size: clamp(2.3rem, 10.5vw, 3.4rem);
+    line-height: 1.16;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.65;
+    padding: 0 4px;
+  }
+  .hero-gift-box-wrapper {
+    margin: 10px 0 14px;
+  }
+  .gift-box {
+    width: 96px;
+    height: 96px;
+  }
+  .gift-lid {
+    width: 106px;
+    height: 30px;
+  }
+  .gift-body {
+    width: 96px;
+    height: 72px;
+    top: 26px;
+  }
+  .hero-actions .btn-primary {
+    width: 100%;
+    max-width: 320px;
+    font-size: 0.96rem;
+    padding: 13px 20px;
+  }
+
+  /* 3D Birthday Cake on Phone */
+  .cake-section {
+    padding: 50px 4px 70px;
+  }
+  .section-tag {
+    font-size: 0.8rem;
+    padding: 5px 16px;
+  }
+  .section-title {
+    font-size: 2.3rem;
+  }
+  .section-desc {
+    font-size: 1rem;
+    padding: 0 6px;
+  }
+  .cake-mount {
+    height: 350px;
+    max-width: 100%;
+    margin: 0 auto 16px;
+  }
+  .cake3d-viewport {
+    height: 350px;
+    max-width: 100%;
+  }
+  .cake3d-hint {
+    font-size: 0.78rem;
+    padding: 4px 14px;
+    bottom: 0px;
+  }
+  .blow-controls-panel {
+    padding: 20px 16px;
+    width: 100%;
+    gap: 14px;
+  }
+  .blow-buttons-row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+  .blow-buttons-row button {
+    width: 100%;
+    max-width: 290px;
+    font-size: 0.94rem;
+    padding: 13px 18px;
+  }
+  .wish-banner-card {
+    padding: 18px 16px;
+  }
+  .wish-banner-title {
+    font-size: 1.7rem;
+  }
+  .wish-banner-sub {
+    font-size: 0.96rem;
+  }
+
+  /* Blessings Trio Badges on Phone */
+  .blessings-trio-row {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 26px;
+  }
+  .blessing-badge-card {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 14px;
+  }
+  .blessing-title {
+    font-size: 1.55rem;
+  }
+
+  /* Polaroid Scrapbook on Phone */
+  .gallery-section {
+    padding: 50px 4px;
+  }
   .polaroid-grid {
     grid-template-columns: 1fr;
-    max-width: 360px;
+    gap: 26px;
+    max-width: 330px;
     margin: 0 auto;
   }
-  .lightbox-prev { left: 4px; }
-  .lightbox-next { right: 4px; }
-  .letter-paper { padding: 26px 20px; }
-  .envelope.opened .letter-paper.extracted { transform: translateY(-40px); }
-  .finale-card { padding: 44px 22px; }
+  .polaroid-card {
+    padding: 14px 14px 20px;
+  }
+  .polaroid-title {
+    font-size: 1.35rem;
+  }
+
+  /* Birthday Letter on Phone */
+  .letter-section {
+    padding: 50px 4px;
+  }
+  .envelope {
+    min-height: 220px;
+    margin-bottom: 16px;
+  }
+  .wax-seal {
+    width: 48px;
+    height: 48px;
+  }
+  .seal-icon { font-size: 17px; }
+  .seal-text { font-size: 9px; }
+  .letter-paper {
+    padding: 24px 16px;
+    width: 98%;
+  }
+  .envelope.opened .letter-paper.extracted {
+    transform: translateY(-28px);
+    margin-bottom: 8px;
+  }
+  .paper-date { font-size: 1.25rem; }
+  .letter-typewriter-content {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+  .letter-greeting {
+    font-size: 1.45rem;
+  }
+  .letter-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+  .letter-actions button {
+    width: 100%;
+    max-width: 290px;
+    font-size: 0.92rem;
+    padding: 12px 18px;
+  }
+
+  /* Balloons Mini-Game on Phone */
+  .balloons-section {
+    padding: 50px 4px;
+  }
+  .balloons-cluster {
+    gap: 16px;
+    margin-top: 22px;
+  }
+  .balloon-body {
+    width: 70px;
+    height: 86px;
+  }
+  .balloon-icon { font-size: 22px; }
+  .balloon-bow { font-size: 1.1rem; }
+  .balloon-modal-card {
+    padding: 26px 18px;
+  }
+  .balloon-surprise-text {
+    font-size: 1.45rem;
+  }
+
+  /* Finale on Phone */
+  .finale-section {
+    padding: 50px 4px 90px;
+  }
+  .finale-card {
+    padding: 42px 18px;
+    border-radius: var(--radius-md);
+  }
+  .finale-title {
+    font-size: 2.1rem;
+  }
+  .finale-text {
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+  .finale-actions .btn-primary {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  /* Lightbox on Phone */
+  .lightbox-content {
+    width: 95%;
+    max-height: 94vh;
+  }
+  .lightbox-body {
+    padding: 16px 14px;
+    max-height: 88vh;
+  }
+  .lightbox-img-frame {
+    max-height: 45vh;
+  }
+  .lightbox-close {
+    top: -42px;
+    right: 4px;
+    font-size: 2.3rem;
+  }
+  .lightbox-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+  .lightbox-prev { left: -6px; }
+  .lightbox-next { right: -6px; }
+}
+
+@media (max-width: 380px) {
+  .hero-title { font-size: 2.2rem; }
+  .section-title { font-size: 2rem; }
+  .cake-mount, .cake3d-viewport { height: 320px; }
 }
