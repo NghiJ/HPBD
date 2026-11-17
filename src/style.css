@@ -1097,11 +1097,84 @@ body {
   padding: 90px 10px;
 }
 
+/* 3 Core Blessings Badges: Bình An • Vui Vẻ • Mạnh Khỏe */
+.blessings-trio-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  margin-bottom: 36px;
+}
+
+.blessing-badge-card {
+  flex: 1;
+  min-width: 180px;
+  max-width: 240px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.8px dashed var(--secondary-pink);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 6px 20px rgba(255, 143, 171, 0.15);
+  transition: var(--transition-bounce);
+}
+
+.blessing-badge-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: var(--shadow-md);
+  border-style: solid;
+}
+
+.badge-peace {
+  border-color: #a3e635;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 253, 244, 0.95));
+}
+.badge-joy {
+  border-color: #ff8fab;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 240, 245, 0.95));
+}
+.badge-health {
+  border-color: #facc15;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(254, 252, 232, 0.95));
+}
+
+.blessing-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.blessing-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-pink);
+}
+
+.badge-peace .blessing-title { color: #16a34a; }
+.badge-joy .blessing-title { color: #db2777; }
+.badge-health .blessing-title { color: #ca8a04; }
+
+.blessing-sub {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .polaroid-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 38px;
-  margin-top: 24px;
+  margin-top: 10px;
 }
 
 .polaroid-card {

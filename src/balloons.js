@@ -5,12 +5,12 @@ import confetti from 'canvas-confetti';
 export class BalloonsManager {
   constructor() {
     this.messages = [
-      { text: "Bạn là người ấm áp và ngọt ngào nhất thế giới! 🌸", color: "#ff8fab" },
-      { text: "Chúc bạn tuổi mới luôn ngập tràn may mắn & hạnh phúc! 🍀", color: "#b8e994" },
-      { text: "Nụ cười của bạn làm bừng sáng mọi không gian! ✨", color: "#ffd166" },
-      { text: "Mọi mục tiêu & ước mơ của bạn đều sẽ thành công mỹ mãn! 🎯", color: "#74b9ff" },
-      { text: "Luôn tự tin, kiêu hãnh và rực rỡ như hoa mùa hạ nhé! 🌷", color: "#a29bfe" },
-      { text: "Cảm ơn vì đã luôn là một người bạn tuyệt vời đến vậy! 💖", color: "#fd79a8" }
+      { text: "Chúc bạn một đời BÌNH AN, tâm hồn luôn tĩnh lặng, an nhiên giữa mọi bão giông! 🕊️🌿", color: "#b8e994" },
+      { text: "Chúc bạn mỗi ngày đều ngập tràn niềm VUI VẺ, nụ cười rạng rỡ như ánh ban mai! 🌸✨", color: "#ff8fab" },
+      { text: "Chúc bạn luôn MẠNH KHỎE dồi dào, tràn đầy sức sống để chinh phục mọi ước mơ! 💪💖", color: "#ffd166" },
+      { text: "Chúc bạn tuổi mới VẠN SỰ NHƯ Ý, bước đến đâu may mắn mỉm cười đến đó! 🍀🎯", color: "#74b9ff" },
+      { text: "Chúc bạn luôn được YÊU THƯƠNG và trân quý theo cách ngọt ngào, trọn vẹn nhất! 🎀🌷", color: "#fd79a8" },
+      { text: "Luôn tự tin, kiêu hãnh và TỎA SÁNG rực rỡ nhất theo cách riêng của bạn nhé! 👑⭐", color: "#a29bfe" }
     ];
 
     this.container = null;

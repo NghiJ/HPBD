@@ -6,10 +6,12 @@ export class LetterManager {
   constructor() {
     this.letterTextParagraphs = [
       "Gửi người bạn đặc biệt nhất của ngày 18 tháng 11,",
-      "Hôm nay là một ngày thật dịu dàng, ngày mà một người tuyệt vời như bạn xuất hiện trên thế giới này. Giữa muôn vàn những điều bình dị của cuộc sống, nụ cười rạng rỡ và sự ấm áp của bạn luôn mang đến nguồn năng lượng kỳ diệu cho những người xung quanh.",
-      "Bước sang tuổi mới, chúc bạn luôn giữ được nét hồn nhiên, đôi mắt trong veo và một trái tim đầy ắp ước mơ. Mong rằng mỗi chặng đường phía trước bạn đi qua đều ngập tràn hoa thơm, nắng ấm và những điều ngọt ngào nhất.",
-      "Dù ngoài kia có đôi lúc giông bão hay mệt mỏi, hãy nhớ rằng bạn luôn xứng đáng được yêu thương, trân trọng và hạnh phúc theo cách trọn vẹn nhất. Mọi ước nguyện chân thành bạn gửi vào ngọn nến hôm nay chắc chắn sẽ thành sự thật!",
-      "Chúc mừng sinh nhật bạn! Happy 18.11 Birthday! ✨🎂💖"
+      "Hôm nay là một ngày thật dịu dàng, ngày mà một người tuyệt vời như bạn xuất hiện trên thế giới này. Giữa muôn vàn những điều bình dị của cuộc sống, nụ cười rạng rỡ và sự ấm áp của bạn luôn là nguồn năng lượng kỳ diệu sưởi ấm trái tim mọi người xung quanh.",
+      "Bước sang tuổi mới, chúc bạn luôn dồi dào MẠNH KHỎE, mỗi sáng thức dậy đều tràn đầy năng lượng tươi mới, ăn uống ngon miệng và luôn có những giấc ngủ thật an lành.",
+      "Chúc bạn một đời BÌNH AN, tâm hồn luôn an nhiên, dịu êm đi qua mọi thăng trầm cuộc sống. Mong rằng bạn luôn tìm thấy sự thanh thản và bình yên trong từng khoảnh khắc.",
+      "Chúc bạn mỗi ngày trôi qua đều ngập tràn niềm VUI VẺ và hạnh phúc ngọt ngào. Mong nụ cười rạng rỡ, đôi mắt trong veo và sự đáng yêu của bạn sẽ luôn tỏa sáng như đóa hoa hướng dương đón nắng!",
+      "Dù chặng đường phía trước có ra sao, hãy luôn nhớ rằng bạn xứng đáng được yêu thương, nâng niu và hạnh phúc trọn vẹn nhất. Mọi ước nguyện chân thành bạn gửi vào ngọn nến hôm nay chắc chắn sẽ thành hiện thực!",
+      "Chúc mừng sinh nhật 18/11! Chúc bạn tuổi mới: BÌNH AN • MẠNH KHỎE • VUI VẺ nha! ✨🎂💖"
     ];
 
     this.isOpen = false;

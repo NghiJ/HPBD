@@ -6,68 +6,68 @@ export class GalleryManager {
     this.photos = [
       {
         id: 1,
-        src: '/photos/photo_1.jpg',
-        title: 'Nụ cười đóa tulip 🌷',
-        caption: 'Nụ cười rực rỡ và thuần khiết tựa những cánh tulip nở rộ dưới nắng mai.',
-        date: '18 . 11 Memories',
-        rotation: -3,
+        src: '/photos/real_1.jpg',
+        title: 'Bình An Trong Tâm Hồn 🌿',
+        caption: 'Chúc bạn một đời bình an, tâm hồn luôn tĩnh lặng, dịu êm và thảnh thơi đi qua những năm tháng thanh xuân tuyệt đẹp.',
+        date: '18 . 11 • Bình An',
+        rotation: -2.5,
         tapeColor: '#ffd1dc',
-        sticker: '🎀'
+        sticker: '🕊️'
       },
       {
         id: 2,
-        src: '/photos/photo_2.jpg',
-        title: 'Chiều cafe ấm áp ☕',
-        caption: 'Một chiều se lạnh, tách latte ngọt ngào và những câu chuyện cười không dứt.',
-        date: 'Sweet Moments',
+        src: '/photos/real_2.jpg',
+        title: 'Nụ Cười Luôn Vui Vẻ 🌸',
+        caption: 'Mong nụ cười tươi tắn của bạn luôn rạng rỡ trên môi, mỗi ngày mới thức dậy đều ngập tràn niềm vui và tiếng cười rộn rã!',
+        date: '18 . 11 • Vui Vẻ',
         rotation: 2.5,
         tapeColor: '#e8dff5',
-        sticker: '🧸'
+        sticker: '🎀'
       },
       {
         id: 3,
-        src: '/photos/photo_3.jpg',
-        title: 'Điều ước tuổi mới 🎂',
-        caption: 'Nguyện cho tất cả ước mong chân thành nhất của bạn đều sẽ hóa thành hiện thực.',
-        date: 'Make A Wish',
+        src: '/photos/real_3.jpg',
+        title: 'Mạnh Khỏe & Tràn Đầy Năng Lượng 💪',
+        caption: 'Tuổi mới chúc bạn luôn dồi dào sức khỏe, tinh thần dẻo dai, ngủ thật ngon và luôn tràn đầy năng lượng tích cực!',
+        date: '18 . 11 • Mạnh Khỏe',
         rotation: -2,
         tapeColor: '#fcf4dd',
-        sticker: '🍓'
+        sticker: '💖'
       },
       {
         id: 4,
-        src: '/photos/photo_4.jpg',
-        title: 'Hoàng hôn bên biển 🌅',
-        caption: 'Gió biển dịu dàng vờn mái tóc, ngắm nhìn hoàng hôn nhuộm hồng cả chân trời.',
-        date: 'Dreamy Horizon',
+        src: '/photos/real_4.jpg',
+        title: 'Hạnh Phúc Ngọt Ngào 🌷',
+        caption: 'Chúc bạn luôn được yêu thương, được nâng niu trân trọng và gặp được những điều dịu dàng, ấm áp nhất trên đời.',
+        date: '18 . 11 • Hạnh Phúc',
         rotation: 3,
         tapeColor: '#ddedff',
-        sticker: '🌸'
+        sticker: '🍓'
       },
       {
         id: 5,
-        src: '/photos/photo_5.jpg',
-        title: 'Năng lượng tỏa sáng ✌️',
-        caption: 'Luôn giữ tinh thần lạc quan, nụ cười tinh nghịch và sự đáng yêu ngập tràn!',
-        date: 'Stay Sweet & Bright',
+        src: '/photos/real_5.jpg',
+        title: 'Vạn Sự Như Ý & Tỏa Sáng ✨',
+        caption: 'Mọi ước mơ bạn ấp ủ, mọi mục tiêu bạn hướng tới đều sẽ thành công rực rỡ và đơm hoa kết trái ngọt lành!',
+        date: '18 . 11 • Như Ý',
         rotation: -2.5,
         tapeColor: '#ffd1dc',
-        sticker: '🌷'
+        sticker: '⭐'
       },
       {
         id: 6,
-        src: '/photos/photo_6.jpg',
-        title: 'Lưu giữ thanh xuân 🌸',
-        caption: 'Mỗi khoảnh khắc có bạn đều trở thành một trang ký ức tuyệt đẹp.',
-        date: 'Cherished Times',
+        src: '/photos/photo_3.jpg',
+        title: 'Tuổi Mới Thật Rực Rỡ 🎂',
+        caption: 'Nguyện cho tất cả ước mong chân thành nhất của bạn gửi vào ngọn nến hôm nay đều sẽ hóa thành hiện thực.',
+        date: 'Make A Wish 18.11',
         rotation: 2,
         tapeColor: '#e8dff5',
-        sticker: '💖'
+        sticker: '🧸'
       }
     ];
 
     this.currentIndex = 0;
-    this.likes = [18, 24, 99, 36, 42, 88];
+    this.likes = [99, 120, 88, 105, 118, 92];
     this.initElements();
   }
 
