@@ -298,13 +298,15 @@
     <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
       <div class="lightbox-backdrop"></div>
       <div class="lightbox-content">
-        <button class="lightbox-close" id="lightbox-close" title="Đóng" aria-label="Đóng">&times;</button>
-        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" title="Ảnh trước" aria-label="Ảnh trước">&#10094;</button>
-        
         <div class="lightbox-body">
+          <button class="lightbox-close" id="lightbox-close" title="Đóng" aria-label="Đóng">&times;</button>
+          
           <div class="lightbox-img-frame">
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev" title="Ảnh trước" aria-label="Ảnh trước">&#10094;</button>
             <img src="" alt="" id="lightbox-img" class="lightbox-img" />
+            <button class="lightbox-nav lightbox-next" id="lightbox-next" title="Ảnh tiếp theo" aria-label="Ảnh tiếp theo">&#10095;</button>
           </div>
+          
           <div class="lightbox-details">
             <span class="lightbox-date" id="lightbox-date"></span>
             <h3 class="lightbox-title" id="lightbox-title"></h3>
@@ -317,8 +319,6 @@
             </div>
           </div>
         </div>
-
-        <button class="lightbox-nav lightbox-next" id="lightbox-next" title="Ảnh tiếp theo" aria-label="Ảnh tiếp theo">&#10095;</button>
       </div>
     </div>
 

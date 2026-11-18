@@ -136,8 +136,36 @@ export class GalleryManager {
     }
     if (this.modal) {
       this.modal.addEventListener('click', (e) => {
-        if (e.target === this.modal) this.closeLightbox();
+        if (e.target === this.modal || e.target.classList.contains('lightbox-backdrop')) {
+          this.closeLightbox();
+        }
       });
+
+      // Mobile Touch Swipe Gesture Support
+      let touchStartX = 0;
+      let touchStartY = 0;
+      this.modal.addEventListener('touchstart', (e) => {
+        if (e.changedTouches && e.changedTouches[0]) {
+          touchStartX = e.changedTouches[0].screenX;
+          touchStartY = e.changedTouches[0].screenY;
+        }
+      }, { passive: true });
+
+      this.modal.addEventListener('touchend', (e) => {
+        if (e.changedTouches && e.changedTouches[0]) {
+          const touchEndX = e.changedTouches[0].screenX;
+          const touchEndY = e.changedTouches[0].screenY;
+          const diffX = touchEndX - touchStartX;
+          const diffY = touchEndY - touchStartY;
+          if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+              this.navigate(-1); // Swipe right -> prev
+            } else {
+              this.navigate(1);  // Swipe left -> next
+            }
+          }
+        }
+      }, { passive: true });
     }
 
     if (this.modalHeartBtn) {
