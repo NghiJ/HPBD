@@ -3,7 +3,6 @@ import { soundEngine } from './audio.js';
 import { Cake3DManager } from './cake3d.js';
 import { GalleryManager } from './gallery.js';
 import { LetterManager } from './letter.js';
-import { BalloonsManager } from './balloons.js';
 import { AmbientEffects } from './effects.js';
 import confetti from 'canvas-confetti';
 
@@ -11,10 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize ambient effects (petals, sparkle trails)
   const ambient = new AmbientEffects();
 
-  // Initialize Gallery, Letter, Balloons
+  // Initialize Gallery, Letter
   const gallery = new GalleryManager();
   const letter = new LetterManager();
-  const balloons = new BalloonsManager();
 
   // Sections that unlock or reveal
   const interactiveSections = document.getElementById('interactive-experience');
