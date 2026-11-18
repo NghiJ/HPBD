@@ -123,26 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }, 400);
-
-  // Replay All Button
-  const replayBtn = document.getElementById('btn-replay-all');
-  if (replayBtn) {
-    replayBtn.addEventListener('click', () => {
-      soundEngine.playSparkleSound();
-      cake.reset();
-      letter.reset();
-      if (giftBoxWrapper) {
-        giftBoxWrapper.classList.remove('opened');
-      }
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      confetti({
-        particleCount: 60,
-        spread: 80,
-        origin: { y: 0.8 },
-        colors: ['#ff5c8a', '#ff8fab', '#ffd166']
-      });
-    });
-  }
 });
